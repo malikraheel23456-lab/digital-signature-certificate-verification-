@@ -1,0 +1,13 @@
+flowchart TD
+    A[Signer / University Office] --> B[Select Document]
+    B --> C[Load RSA Private Key]
+    C --> D[Hash and Sign with RSA-PSS + SHA-256]
+    D --> E[Document + Signature File]
+    F[Verifier] --> G[Upload Document, Signature and Public Key]
+    G --> H[Verify RSA-PSS Signature]
+    H --> I{Signature valid?}
+    I -- No --> J[Reject: INVALID]
+    I -- Yes --> K[Optional Trusted-Key Record Check]
+    K --> L{Fingerprint matches and status ACTIVE?}
+    L -- Yes --> M[Signature VALID + Key TRUSTED]
+    L -- No --> N[Signature VALID, Key NOT TRUSTED]
