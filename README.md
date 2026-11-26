@@ -1,6 +1,6 @@
 # Digital Signature and Certificate Verification System
 
-**Selected course artifact:** Artifact 2 — Digital Signature and Certificate Verification System  
+**Selected course artifact:**  Digital Signature and Certificate Verification System  
 **Implementation:** Python, Streamlit, `cryptography`, RSA-PSS, SHA-256
 
 ## 1. Project overview
